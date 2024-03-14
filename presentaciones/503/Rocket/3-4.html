@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Valores Por Defecto</title>
+    <!-- Enlaces a los estilos CSS -->
+    <link rel="stylesheet" href="../../../dist/reset.css">
+    <link rel="stylesheet" href="../../../dist/reveal.css">
+    <link rel="stylesheet" href="../../../dist/theme/mydesing.css">
+    <!-- Tema utilizado para resaltar la sintaxis del código -->
+    <link rel="stylesheet" href="../../../plugin/highlight/monokai.css">
+    <style>
+        /* Reducir el tamaño de la fuente en todas las diapositivas */
+        .reveal .slides section {
+            font-size: 0.75em; 
+        }
+    </style>
+    
+            </head>
+            <body>
+                <!-- Contenedor principal de la presentación -->
+                <div class="reveal">
+                    <!-- Contenedor de diapositivas -->
+                    <div class="slides">
+                        <!-- Diapositiva 1 y 2 ese es el ejemplo de como va a ir a informacion -->
+                        <!-- Va ir dentro de las etiquetas section -->
+                        <!-- Y la propiedad de data transition va a ir una diapositiva si y un una no  -->
+                        <!-- Añade más diapositivas según sea necesario -->
+                        <section data-transition="slide" data-background="rgb(0, 46, 99)" data-background-transition="zoom">
+                            <h2>Valores Por Defecto</h2><br>
+                            <p align="left">Elaborado por:</p>
+                            <p align="left"># Jesse Isaac Guerrero Jimenez</p>
+                            <p align="left"># Luis Mario Maurio Jimenez</p>
+                            <p align="left"># Omar Reyes Morales</p>
+                            <p align="left"># Jorge Núñez Fernández</p>
+                            <p align="left"># Jazmín Núñez Fernández</p>
+                                        </section>
+
+                        <section>
+                            <h2>Índice</h2>
+                            <ul>
+                                <li><a href="#slide2">Definicion de Valores Por Defecto</a></li>
+                                <!-- Agrega más enlaces para cada diapositiva -->
+                            </ul>
+                        </section>
+                        
+                        <section data-transition="slide" data-background="rgb(0, 60, 60)" data-background-transition="zoom">
+                            <h4>Definicion de Valores por Defecto (Default Values)</h4>
+                            <p>Los valores predeterminados son aquellos que se asignan automáticamente a un campo o columna de una tabla en una base de datos cuando no se proporciona un valor específico durante la inserción de un nuevo registro.</p>
+                            <p>Estos valores garantizan que los campos no queden vacíos y ayudan a mantener la integridad de los datos.</p>
+                        </section>
+                        
+                        <section>
+                            <h2>Default Values</h2>
+                            <p>La definición de los valores predeterminados se realiza durante la creación de la tabla en la base de datos. Por ejemplo, en SQL, se pueden definir para una columna utilizando la cláusula DEFAULT en la definición de la columna:</p>
+                            <li>CREATE TABLE usuarios (
+                                id INT PRIMARY KEY AUTO_INCREMENT,
+                                nombre VARCHAR(50) NOT NULL,
+                                correo_electronico VARCHAR(100) NOT NULL,
+                                fecha_registro DATE DEFAULT CURRENT_DATE
+                            );</li>
+                            <p>En este ejemplo, la columna fecha_registro tendrá como valor predeterminado la fecha actual (CURRENT_DATE) si no se proporciona un valor durante la inserción de un nuevo registro.</p>
+                        </section>
+                        
+                        <section data-transition="slide" data-background="rgb(20, 33, 48)" data-background-transition="zoom">
+                            <h5>Default Values</h5>
+                            <p>Los valores predeterminados pueden ser valores constantes, expresiones o funciones. Algunos ejemplos comunes incluyen:</p>
+                            <li>Valores constantes: DEFAULT 0, DEFAULT 'N/A'</li>
+                            <li>Expresiones: DEFAULT GETDATE() (fecha y hora actual en SQL Server)</li>
+                            <li>Funciones: DEFAULT UPPER('valor_inicial') (convierte el valor a mayúsculas)</li>
+                        </section>
+
+                        <section id="slide2">
+                            <h6>Default Values</h6>
+                            <p>Es importante tener en cuenta que los valores predeterminados se aplican solo durante la inserción de nuevos registros. Si se actualiza un campo existente, el valor predeterminado no se aplicará automáticamente a menos que se especifique explícitamente.</p>
+                            <p>Además, los valores predeterminados pueden ser anulados o reemplazados por valores explícitos proporcionados durante la inserción de registros. Por ejemplo:</p>
+                            <p>INSERT INTO usuarios (nombre, correo_electronico, fecha_registro)</p>  
+                            <p>VALUES ('Juan Pérez', 'juan@ejemplo.com', '2023-05-01');</p>
+                            <p>En este caso, se está proporcionando un valor específico para fecha_registro, por lo que se anula el valor predeterminado definido en la tabla.</p>              
+                        </section>
+
+                        <section data-transition="slide" data-background="rgb(128, 128, 144)" data-background-transition="zoom">
+                            <h5>Default Values</h5>
+                            <p>Ventajas de los Valores Predeterminados:</p>
+                            <li>Garantizan que los campos no queden vacíos, manteniendo la integridad de los datos.</li>
+                            <li>Facilitan la inserción de nuevos registros al no tener que especificar valores para todas las columnas.</li>
+                            <li>Permiten establecer valores estándar o comunes de antemano.</li>
+                            <li>Pueden calcular valores dinámicos como fechas, horas, secuencias, etc.</li>
+                        </section>
+
+                        <section data-transition="slide" data-background="rgb(0, 100, 0)" data-background-transition="zoom">
+                            <h5>Default Values</h5>
+                            <p>Características importantes:</p>
+                            <li>Se pueden anular proporcionando un valor explícito durante la inserción.</li>
+                            <li>No se aplican automáticamente al actualizar registros existentes.</li>
+                            <li>Los cambios en la definición del valor predeterminado solo afectan a los nuevos registros.</li>
+                            <li>El uso excesivo de expresiones o funciones complejas puede afectar el rendimiento.</li>
+                        </section>
+
+                        <section data-transition="slide" data-background="rgb(0, 60, 60)" data-background-transition="zoom">
+                            <h7>Referencias</h7>
+                            <li>Documentación de MySQL: Default Value Clause</a></li>
+                            <li>Documentación de SQL Server: DEFAULT Constraints</a></li>
+                            <li>Documentación de PostgreSQL: Default Values</a></li>
+                            <li>Libro "Database Systems: A Practical Approach to Design, Implementation, and Management" de Thomas M. Connolly y Carolyn E. Begg.</a></li>
+                            
+                        </section>
+
+                    </div>
+                </div>
+
+                <!-- Scripts JavaScript -->
+                <script src="../../../dist/reveal.js"></script>
+                <!-- Plugins -->
+                <script src="../../../plugin/markdown/markdown.js"></script>
+                <script src="../../../plugin/highlight/highlight.js"></script>
+                <!-- Inicialización de la presentación -->
+                <script>
+                    // Más información sobre la inicialización y la configuración:
+                    // - https://revealjs.com/initialization/
+                    // - https://revealjs.com/config/
+                    Reveal.initialize({
+                        // Habilita el uso de enlaces hash para la navegación
+                        hash: true,
+                        // Plugins utilizados en la presentación
+                        plugins: [ RevealMarkdown, RevealHighlight ]
+                    });
+                </script>
+            </body>
+            </html>
