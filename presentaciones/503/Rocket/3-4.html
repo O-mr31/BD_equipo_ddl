@@ -159,12 +159,27 @@
             </section>
 
             <section>
-                <img src="Recursos\autoincremento_1.JPG" width="800" height="auto"">
+                <pre data-id="code-animation"><code class="hljs javascript" data-trim data-line-numbers>
+                    mysql> create table EMPLEADO (
+                    -> IdEmpleado INT AUTO_ INCREMENT PRIMARY KEY,
+                    -> primerNombre VARCHAR(10),
+                    -> segundoNombre VARCHAR(10),
+                    -> apellidop VARCHAR(20),
+                    -> apellidoM VARCHAR(20),
+                    -> edad INT);
+                </code></pre>
                 <img src="Recursos\autoincremento_1.2.JPG" width="900" height="auto"">
             </section>
 
             <section data-transition="slide" data-background="#393E46" data-background-transition="zoom">
-                <img src="Recursos\autoincremento_2.JPG" width="800" height="auto"">
+                <pre data-id="code-animation"><code class="hljs javascript" data-trim data-line-numbers>
+                    mysql> create table EMPRESA (
+                    -> id INT AUTO_ INCREMENT PRIMARY KEY NOT NULL, 
+                    -> ciudad VARCHAR(25) NOT NULL,
+                    -> pais VARCHAR(25) NOT NULL,
+                    -> telefono VARCHAR(10) NOT NULL)
+                    AUTO INCREMENT=20;
+                </code></pre>
                 <img src="Recursos\autoincremento_2.2.JPG" width="900" height="auto"">
             </section>
         </section>
@@ -185,7 +200,13 @@
                 <h3>
                     <font face="Cambria">COMMENT</font>
                     </h3>
-                <img src="Recursos\comment.1.JPG" width="800" height="auto"">
+                <pre data-id="code-animation"><code class="hljs javascript" data-trim data-line-numbers>
+                        mysql> CREATE TABLE ESTUDIANTE (
+                        -> matricula INT AUTO_INCREMENT PRIMARY KEY COMMENT 'id_del_alumno'
+                        -> carrera VARCHAR(20),
+                        -> promedio INT NOT NULL,
+                        -> grupo INT);
+                </code></pre>
                 <img src=" Recursos\comment.1.2.JPG" width="900" height="auto"">
             </section>
         </section>
