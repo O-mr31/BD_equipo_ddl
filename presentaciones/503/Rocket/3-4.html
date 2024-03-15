@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Valores Por Defecto</title>
+    <!-- Enlaces a los estilos CSS -->
+    <link rel="stylesheet" href=Campo: Fecha de Envío
+    Ejemplo: Para los pedidos que aún no han sido enviados, la fecha de envío puede no estar disponible. En este caso, el campo "Fecha de Envío" podría ser nulo hasta que se realice el envío del pedido."../../../dist/reset.css">
+    <link rel="stylesheet" href="../../../dist/reveal.css">
+    <link rel="stylesheet" href="../../../dist/theme/mydesing.css">
+    <!-- Tema utilizado para resaltar la sintaxis del código -->
+    <link rel="stylesheet" href="../../../plugin/highlight/monokai.css">
+    <style>
+        /* Reducir el tamaño de la fuente en todas las diapositivas */
+        .reveal .slides section {
+            font-size: 0.75em; 
+        }
+    </style>
+    
+            </head>
+            <body>
+                <!-- Contenedor principal de la presentación -->
+                <div class="reveal">
+                    <!-- Contenedor de diapositivas -->
+                    <div class="slides">
+                        <!-- Diapositiva 1 y 2 ese es el ejemplo de como va a ir a informacion -->
+                        <!-- Va ir dentro de las etiquetas section -->
+                        <!-- Y la propiedad de data transition va a ir una diapositiva si y un una no  -->
+                        <!-- Añade más diapositivas según sea necesario -->
+                        <section data-transition="slide" data-background="rgb(0, 46, 99)" data-background-transition="zoom">
+                            <h2>Valores Por Defecto</h2><br>
+                            <p align="left">Elaborado por:</p>
+                            <p align="left"># Jesse Isaac Guerrero Jimenez</p>
+                            <p align="left"># Luis Mario Maurio Jimenez</p>
+                            <p align="left"># Omar Reyes Morales</p>
+                            <p align="left"># Jorge Núñez Fernández</p>
+                            <p align="left"># Jazmín Núñez Fernández</p>
+                                        </section>
+
+                        <section>
+                            <h2>Índice</h2>
+                            <ul>
+                                <li><a href="#slide2">Definicion de Valores Por Defecto</a></li>
+                                <!-- Agrega más enlaces para cada diapositiva -->
+                            </ul>
+                        </section>
+                        
+<!-- Diapositivas jazz -->
+                        <section data-transition="slide" data-background="rgb(0, 50, 60)" data-background-transition="zoom">
+                            <h7>NOT NULL/NULL</h7>
+                            <li>Al definir cada columna podemos decidir si podra o no contener valores nulos</a></li>
+                            <li>Al insertar datos en una tabla, puedes omitir valores para columnas que permiten valores nulos, lo que significa que esos campos no tendran un valor definido. </a></li>
+                        </section>
+
+                        <section data-transition="slide" data-background="rgb(0, 50, 60)" data-background-transition="zoom">
+                            <h7>COMPROBACIONES DE NULOS</h7>
+                            <li>Se puede usar la funcion "IS NULL" O "IS NOT NULL" en las consultas para verificar si un valor es nulo o no</a></li>
+                            <li>Valores Predeterminados:Al definir una columna en una tabla, podemos especificar un valor predeterminado utilizando la clausula "DEFAULT"</a></li>
+                            <li>Indices y valores nulos: Mysql maneja los valores nulos de manera especial en los indices.Ejemplo...</a></li>
+                            <li>Consultas: Al realizar consultas es importante tomar en cuenta como se manejan los valores</a></li>
+                        </section>
+
+                        <section data-transition="slide" data-background="rgb(0, 50, 60)" data-background-transition="zoom">
+                            <h7>VALORES NULOS</h7>
+                            <li>ALTER TABLE: esto modifica la columna en la tabla para no permitir valores nulos. 
+                                Si la columna ya contiene valores nulos esta operacion fallara a menos que todos los valores nulos sean actualizados o eliminados.</a></li>
+                        </section>
+
+                        <section data-transition="slide" data-background="rgb(0, 50, 60)" data-background-transition="zoom">
+                            <h7>IMPORTANCIA</h7>
+                            <li>Proporcionan flexibilidad en el manejo de datos, permitiendo que ciertos campos no tengan información sin romper la integridad de la tabla.</a></li>
+                            <li>Son útiles para representar información desconocida o no aplicable en ciertos contextos.</a></li>
+                        </section>
+
+                        <section data-transition="slide" data-background="rgb(0, 50, 60)" data-background-transition="zoom">
+                            <h7>EJEMPLOS DE USO</h7>
+                            <li>En una tabla de empleados, el campo "fecha de nacimiento" puede ser nulo si la fecha no se ha registrado.</a></li>
+                            <li>Campo: Fecha de Envío
+                                Ejemplo: Para los pedidos que aún no han sido enviados, 
+                                la fecha de envío puede no estar disponible. 
+                                En este caso, el campo "Fecha de Envío" podría ser nulo hasta que se realice el envío del pedido.</a></li>
+                        </section>
+
+                    </div>
+                </div>
+
+                <!-- Scripts JavaScript -->
+                <script src="../../../dist/reveal.js"></script>
+                <!-- Plugins -->
+                <script src="../../../plugin/markdown/markdown.js"></script>
+                <script src="../../../plugin/highlight/highlight.js"></script>
+                <!-- Inicialización de la presentación -->
+                <script>
+                    // Más información sobre la inicialización y la configuración:
+                    // - https://revealjs.com/initialization/
+                    // - https://revealjs.com/config/
+                    Reveal.initialize({
+                        // Habilita el uso de enlaces hash para la navegación
+                        hash: true,
+                        // Plugins utilizados en la presentación
+                        plugins: [ RevealMarkdown, RevealHighlight ]
+                    });
+                </script>
+            </body>
+            </html>
